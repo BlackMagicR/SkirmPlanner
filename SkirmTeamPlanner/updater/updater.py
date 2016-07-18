@@ -1,6 +1,6 @@
-from lxml import html
 from threading import Thread
-import requests, time
+from lxml import html
+import requests, time, os
 
 
 def main():
@@ -26,12 +26,18 @@ def main():
 
 def parse_skirms(html):
     print "----------------Start parsing the html-----------------"
-    elements = html.xpath('//h2[@class="sfitemTitle"]/span[starts-with(@id, "ctl00_sectionContent_ctl10_ctl00_ctl00_dynamicContentListView_ctrl")]/text()')
-    # elements = html.xpath('//*[@id="ctl00_sectionContent_ctl10_ctl00_ctl00_dynamicContentListView_ctrl"]')
-    for element in elements:
-        print element.encode('UTF-8')
+    titles = html.xpath('//h2[@class="sfitemTitle"]/span[starts-with(@id, "ctl00_sectionContent_ctl10_ctl00_ctl00_dynamicContentListView_ctrl")]/text()')
+    days = html.xpath('//div[@class="dateDay"]/span[@id="ctl00_sectionContent_ctl10_ctl00_ctl00_dynamicContentListView_ctrl"]')
+    print len(days)
+    #This can propably be done better.
+    counter = 0
+    for title in titles:
+        print title.encode('UTF-8')
+        print days[counter].encode('UTF-8')
+        counter+=1
         
     
 
 if __name__ == "__main__":
+    #I still need to add a context manager with Error email to make sure I get an email when the format is no longer working
     main()
