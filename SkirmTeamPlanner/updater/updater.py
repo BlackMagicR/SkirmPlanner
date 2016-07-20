@@ -25,15 +25,19 @@ def main():
 
 
 def parse_skirms(html):
+    #See if we can compare the performance between getting all items matching the xpath or getting the items seperately using a counter
     print "----------------Start parsing the html-----------------"
     titles = html.xpath('//h2[@class="sfitemTitle"]/span[starts-with(@id, "ctl00_sectionContent_ctl10_ctl00_ctl00_dynamicContentListView_ctrl")]/text()')
-    days = html.xpath('//div[@class="dateDay"]/span[@id="ctl00_sectionContent_ctl10_ctl00_ctl00_dynamicContentListView_ctrl"]')
-    print len(days)
+    days = html.xpath('//div[@class="dateDay"]/span[starts-with(@id, "ctl00_sectionContent_ctl10_ctl00_ctl00_dynamicContentListView_ctrl")]/text()')
+    month_year = html.xpath('//div[@class="dateMonthYear"]/span[starts-with(@id, "ctl00_sectionContent_ctl10_ctl00_ctl00_dynamicContentListView_ctrl")]/text()')
+    city = html.xpath('//span[@class="eventLocation"]/text()')
+    print len(month_year)
     #This can propably be done better.
     counter = 0
     for title in titles:
         print title.encode('UTF-8')
         print days[counter].encode('UTF-8')
+        print month_year[counter].encode('UTF-8')
         counter+=1
         
     
