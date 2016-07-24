@@ -8,8 +8,6 @@ class Skirm(models.Model):
     link = models.CharField(max_length=150)
     date = models.DateField()
     city = models.CharField(max_length=50)
-    joined_members = models.ManyToManyField(User)
-    planned = models.BooleanField()
 
     #We load these items the first time a user loads the skirm page and then save it. That is more effective than visiting all pages using the updater
     description = models.CharField(max_length=5000) 
