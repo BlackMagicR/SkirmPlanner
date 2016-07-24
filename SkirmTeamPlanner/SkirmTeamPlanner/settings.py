@@ -84,6 +84,24 @@ DATABASES = {
     }
 }
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'skirm_updater': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'C:/DjangoLogging/SkirmPlanner/updater.log',
+        },
+    },
+    'loggers': {
+        'skirm_updater_log': {
+            'handlers': ['skirm_updater'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
