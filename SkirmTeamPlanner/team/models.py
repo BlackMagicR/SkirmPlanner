@@ -17,5 +17,5 @@ class Team(models.Model):
     description = models.CharField(max_length=500)
     #Doing the following will allow us to add more information to the skirm using the relationship. For instance:
     #You want to add the members joining this event to a model in the database but it makes no sense to add them to the Skirm model since it is unique to every PlannedEvent.
-    planned_skirms = models.ManyToManyField(Skirm, through='PlannedEvent')
+    # planned_skirms = models.ManyToManyField(Skirm, through='PlannedEvent')
 
