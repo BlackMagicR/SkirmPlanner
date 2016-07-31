@@ -7,6 +7,7 @@ class Skirm(models.Model):
     title = models.CharField(max_length=250, default='')
     link = models.CharField(max_length=150, default='')
     date = models.DateField()
+    month_name = models.CharField(max_length=3, default='') #I really don't wanna do the conversion everytime, so here it is
     city = models.CharField(max_length=50, default='')
 
     #We load these items the first time a user loads the skirm page and then save it. That is more effective than visiting all pages using the updater
