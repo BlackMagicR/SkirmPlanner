@@ -1,13 +1,21 @@
+{% load staticfiles %}
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'planner/planner.css' %}">
+</head>
+<body>
 <div id="outerSkirmBox">
-    <div id="dateBox" style='align:left'>
+    <div id="dateBox" style='float:left'>
         {{ skirm.date.day }}
         {{ skirm.month_name }}
         {{ skirm.date.year }}
     </div>
-    <div id="infoBox">
+    <div id="infoBox" style='float:center'>
         {{ skirm.title }}
     </div>
     <!-- Perhaps have divider here -->
     <div id="plannedBox">
     </div>
 </div>
+</body>
+</html>

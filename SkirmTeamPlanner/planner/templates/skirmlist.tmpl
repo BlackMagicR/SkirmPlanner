@@ -1,4 +1,7 @@
-<h2>"Test"</h2>
+<h2>"Skirms de komende tijd in Nederland"</h2>
+{% include 'sortpicker.tmpl' %}
+<div id="skirmlist">
 {% for skirm in skirms %}
     {% include 'skirm.tmpl' %}
 {% endfor %}
+<div>
