@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="{% static 'planner/planner.css' %}">
 </head>
 <body>
-<div id="outerSkirmBox">
+<a id="outerSkirmBox" href="{% url 'planner:skirmdetailview' skirm_id=skirm.id %}">
     <div id="dateBox" style='float:left'>
         {{ skirm.date.day }}
         {{ skirm.month_name }}
@@ -13,9 +13,9 @@
     <div id="infoBox" style='float:center'>
         {{ skirm.title }}
     </div>
-    <!-- Perhaps have divider here -->
+
     <div id="plannedBox">
     </div>
-</div>
+</a>
 </body>
 </html>
