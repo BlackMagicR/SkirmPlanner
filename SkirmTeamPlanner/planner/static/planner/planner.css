@@ -1,4 +1,14 @@
-#outerSkirmBox{
-    background-color: black;
+@import url('base.css');
+
+.datebox{
+    float:left;
+    background-color:transparent;
+}
+
+.outerSkirmBox{
+    background-color:#A11616;
+    height: 100px;
     color: white;
+    display:block;
+    margin: 20px 20px 20px 20px
 }

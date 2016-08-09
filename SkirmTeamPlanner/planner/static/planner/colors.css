@@ -1,0 +1,30 @@
+/*http://paletton.com/#uid=2000u0krCkg++00+Q7l10ok8u++*/
+/* As hex codes */
+
+.color-primary-0 { color: #A11616 }	/* Main Primary color */
+.color-primary-1 { color: #000000 }
+.color-primary-2 { color: #3A0000 }
+.color-primary-3 { color: #C2BCBC }
+.color-primary-4 { color: #FFBCBC }
+
+.color-complement-0 { color: #128112 }	/* Main Complement color */
+.color-complement-1 { color: #000000 }
+.color-complement-2 { color: #002F00 }
+.color-complement-3 { color: #969B96 }
+.color-complement-4 { color: #BCFFBC }
+
+
+
+/* As RGBa codes */
+
+.rgba-primary-0 { color: rgba(161, 22, 22,1) }	/* Main Primary color */
+.rgba-primary-1 { color: rgba(  0,  0,  0,1) }
+.rgba-primary-2 { color: rgba( 58,  0,  0,1) }
+.rgba-primary-3 { color: rgba(194,188,188,1) }
+.rgba-primary-4 { color: rgba(255,188,188,1) }
+
+.rgba-complement-0 { color: rgba( 18,129, 18,1) }	/* Main Complement color */
+.rgba-complement-1 { color: rgba(  0,  0,  0,1) }
+.rgba-complement-2 { color: rgba(  0, 47,  0,1) }
+.rgba-complement-3 { color: rgba(150,155,150,1) }
+.rgba-complement-4 { color: rgba(188,255,188,1) }

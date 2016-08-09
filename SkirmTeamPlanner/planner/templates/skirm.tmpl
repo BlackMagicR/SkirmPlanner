@@ -1,21 +1,13 @@
 {% load staticfiles %}
-<html>
-<head>
-  <link rel="stylesheet" href="{% static 'planner/planner.css' %}">
-</head>
-<body>
-<a id="outerSkirmBox" href="{% url 'planner:skirmdetailview' skirm_id=skirm.id %}">
-    <div id="dateBox" style='float:left'>
+<a class="outerSkirmBox" href="{% url 'planner:skirmdetailview' skirm_id=skirm.id %}">
+    <div class="dateBox">
         {{ skirm.date.day }}
         {{ skirm.month_name }}
         {{ skirm.date.year }}
     </div>
-    <div id="infoBox" style='float:center'>
+    <div class="infoBox" style='float:center'>
         {{ skirm.title }}
     </div>
-
-    <div id="plannedBox">
+    <div class="plannedBox">
     </div>
 </a>
-</body>
-</html>

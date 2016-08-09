@@ -15,6 +15,8 @@ class SkirmList(BaseSkirmList):
         return context
     
 class SkirmDetailView(TemplateView):
+
+    
     def get(self, request):
         print "My urls are working!"
 

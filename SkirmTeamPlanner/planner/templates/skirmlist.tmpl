@@ -1,7 +1,14 @@
-<h2>"Skirms de komende tijd in Nederland"</h2>
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'planner/planner.css' %}">
+</head>
+<body class="background"> <!-- I will replace this with a decent parent view and a menu -->
+<h2 class="pagetitle">Skirms</h2>
+<a class="buttonLook">Per week</a> <a class="buttonLook">Per maand</a>
 {% include 'sortpicker.tmpl' %}
-<div id="skirmlist">
+<div id="skirmlist" class="content">
 {% for skirm in skirms %}
     {% include 'skirm.tmpl' %}
 {% endfor %}
-<div>
+</div>
+</body>

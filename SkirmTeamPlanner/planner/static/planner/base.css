@@ -1,0 +1,25 @@
+.content{
+    background-color: #000000;
+    border-style: solid;
+    border-color: #A11616;
+    width: 75em;
+}
+
+.background{
+    background-color:#969B96
+}
+
+.pagetitle{
+    color:white;
+}
+
+.buttonLook{
+    background-color: #128112;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
