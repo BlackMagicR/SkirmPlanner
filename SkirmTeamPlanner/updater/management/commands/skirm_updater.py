@@ -3,7 +3,7 @@ from django.core.management.base import BaseCommand, CommandError
 from threading import Thread
 from lxml import html
 from datetime import datetime
-import requests, time, os, logging
+import requests, time, os, logging, calendar
 
 from updater.models import Skirm
 
@@ -49,7 +49,7 @@ class Command(BaseCommand):
             city = cities[counter].encode('UTF-8').strip('Plaats: ')
             link = "http://nabv.nl/evenementen" + links[counter].encode('UTF-8').strip('..')
             skirm_date = datetime(year=int(month_year.split()[1]), month=int(self.month_names[month_year.split()[0]]), day=int(day))
-            skirm = Skirm(title=title, link=link, date=skirm_date, city=city)
+            skirm = Skirm(title=title, link=link, date=skirm_date, city=city, month_name=month_year.split()[0])
             skirm.save()
             counter+=1
 

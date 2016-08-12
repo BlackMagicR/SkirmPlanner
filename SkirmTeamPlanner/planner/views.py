@@ -15,9 +15,14 @@ class SkirmList(BaseSkirmList):
         return context
     
 class SkirmDetailView(TemplateView):
-
+    template_name = 'skirmdetails.tmpl'
     
-    def get(self, request):
-        print "My urls are working!"
+    def get(self, request, *args, **kwargs):
+        print "GET"
+        return super(SkirmDetailView, self).get(request, *arg, **kwargs)
 
-        return HttpResponse('Jippie')
+    def get_context_data(self, **kwargs):
+        print "GET MY CONTEXT DATAs"
+        context = super(SkirmDetailView, self).get_context_data(**kwargs)
+        context['skirm'] = Skirm.objects.get(id=81)
+        return context

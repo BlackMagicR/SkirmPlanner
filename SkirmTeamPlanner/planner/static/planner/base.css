@@ -1,20 +1,29 @@
 .content{
-    background-color: #000000;
+    background-color: #969B96;
     border-style: solid;
     border-color: #A11616;
     width: 75em;
+    height: auto;
+    
+    font-family: "Lucida Sans Unicode",'Lucida Grande', sans-serif;
+    overflow:auto;
+}
+
+.contentContainer{
+    width: 75em;
+    margin:auto;
 }
 
 .background{
-    background-color:#969B96
+    background-color:#FFFFFF;
 }
 
 .pagetitle{
-    color:white;
+    color:black;
 }
 
 .buttonLook{
-    background-color: #128112;
+    background-color: black;
     border: none;
     color: white;
     padding: 15px 32px;

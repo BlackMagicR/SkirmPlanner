@@ -3,6 +3,7 @@
   <link rel="stylesheet" href="{% static 'planner/planner.css' %}">
 </head>
 <body class="background"> <!-- I will replace this with a decent parent view and a menu -->
+<div class="contentContainer">
 <h2 class="pagetitle">Skirms</h2>
 <a class="buttonLook">Per week</a> <a class="buttonLook">Per maand</a>
 {% include 'sortpicker.tmpl' %}
@@ -10,5 +11,6 @@
 {% for skirm in skirms %}
     {% include 'skirm.tmpl' %}
 {% endfor %}
+</div>
 </div>
 </body>
