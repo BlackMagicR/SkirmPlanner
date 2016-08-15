@@ -16,10 +16,6 @@ class SkirmList(BaseSkirmList):
     
 class SkirmDetailView(TemplateView):
     template_name = 'skirmdetails.tmpl'
-    
-    def get(self, request, *args, **kwargs):
-        print "GET"
-        return super(SkirmDetailView, self).get(request, *arg, **kwargs)
 
     def get_context_data(self, **kwargs):
         print "GET MY CONTEXT DATAs"

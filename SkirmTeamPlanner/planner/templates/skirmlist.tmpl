@@ -1,8 +1,12 @@
+{% extends "base.tmpl" %}
 {% load static %}
 <head>
+  {% block styling %}
+  {{ block.super }}
   <link rel="stylesheet" href="{% static 'planner/planner.css' %}">
+  {% endblock %}
 </head>
-<body class="background"> <!-- I will replace this with a decent parent view and a menu -->
+{% block content %}
 <div class="contentContainer">
 <h2 class="pagetitle">Skirms</h2>
 <a class="buttonLook">Per week</a> <a class="buttonLook">Per maand</a>
@@ -13,4 +17,4 @@
 {% endfor %}
 </div>
 </div>
-</body>
+{% endblock %}
