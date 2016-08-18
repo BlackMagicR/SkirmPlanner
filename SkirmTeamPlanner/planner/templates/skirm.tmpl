@@ -1,5 +1,5 @@
 {% load staticfiles %}
-<a class="outerSkirmBox" href="{% url 'planner:skirmdetailview' skirm_id=skirm.id %}">
+<a class="outerSkirmBox" href="{% url 'planner:skirmdetailview' pk=skirm.id %}">
     <div class="dateBox">
         <div class="dateText">{{ skirm.date.day }}</div>
         <div class="dateText">{{ skirm.month_name }}</div>
@@ -9,8 +9,9 @@
         <div class="skirmTitle">{{ skirm.title }}</div>
         <div class="skirmCity">{{ skirm.city }}</div>
     </div>
-    <div class="plannedBox planned">
-    </div>
+    <a class="plannedBox {% if skirm.planned %} planned {% endif %}">
+        
+    </a>
 </a>
 
 <script>

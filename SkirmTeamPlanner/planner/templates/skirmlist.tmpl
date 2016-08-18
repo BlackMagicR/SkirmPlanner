@@ -1,5 +1,5 @@
 {% extends "base.tmpl" %}
-{% load static %}
+{% load staticfiles %}
 <head>
   {% block styling %}
   {{ block.super }}
@@ -9,7 +9,7 @@
 {% block content %}
 <div class="contentContainer">
 <h2 class="pagetitle">Skirms</h2>
-<a class="buttonLook">Per week</a> <a class="buttonLook">Per maand</a>
+<a class="buttonLook">Per week</a> <a class="buttonLook">Per maand</a><input id="planned_only_box" type="checkbox" name="planned_only" value="planned_only">Planned only
 {% include 'sortpicker.tmpl' %}
 <div id="skirmlist" class="content">
 {% for skirm in skirms %}
@@ -18,3 +18,4 @@
 </div>
 </div>
 {% endblock %}
+<!--Checkbox: Planned only!-->

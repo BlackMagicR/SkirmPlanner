@@ -28,7 +28,11 @@
     float:right;
     height: 100px;
     width: 6em;
-    margin-top:10px;
+    margin-top:-110px;
+}
+
+.planned{
+    background-color: green;
 }
 
 .outerSkirmBox{
@@ -47,6 +51,10 @@
 
 .skirmCity{
     font-style: italic;
+}
+
+#planned_only_box{
+    font-family: "Lucida Sans Unicode",'Lucida Grande', sans-serif;
 }
 
 #sortingButton{

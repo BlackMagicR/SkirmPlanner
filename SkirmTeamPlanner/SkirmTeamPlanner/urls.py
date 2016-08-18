@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^agenda/', include('planner.urls', namespace='planner', app_name='planner'))
+    url(r'^agenda/', include('planner.urls', namespace='planner', app_name='planner')),
+    url(r'^team/', include('team.urls', namespace='team', app_name='team'))
 ]

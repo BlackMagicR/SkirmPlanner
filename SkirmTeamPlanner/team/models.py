@@ -20,4 +20,4 @@ class Team(models.Model):
 class PlannedEvent(models.Model):
     skirm = models.ForeignKey(Skirm, on_delete=models.CASCADE)
     team = models.ForeignKey(Team, on_delete=models.CASCADE)
-
+    

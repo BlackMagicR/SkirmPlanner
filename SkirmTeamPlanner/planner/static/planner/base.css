@@ -19,6 +19,7 @@
 
 .pagetitle{
     color:black;
+    font-family: "Lucida Sans Unicode",'Lucida Grande', sans-serif;
 }
 
 .buttonLook{
@@ -28,6 +29,7 @@
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
+    font-family: "Lucida Sans Unicode",'Lucida Grande', sans-serif;
     display: inline-block;
     font-size: 16px;
 }
