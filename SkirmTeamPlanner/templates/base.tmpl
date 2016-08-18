@@ -2,18 +2,19 @@
 <html>
 <head>
   {% block styling %}
-  <!--<link rel="stylesheet" href="{% static 'base.css' %}">-->
+  <link rel="stylesheet" href="{% static 'base.css' %}">
   {% endblock styling %}
 </head>
-<h1>Skirm planner</h1>
-<div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="menu">
   <a class="profile_button" onclick="javascript_func()">Remco IJntema</a>
   <a href="/agenda/">Planner</a>
   <a href="/team/">Team</a>
   <a href="/settings/">Settings</a>
 </div>
 <body class="background">
+<div class="contentContainer">
 {% block content %}{% endblock %}
+</div>
 </body>
 
 </html>

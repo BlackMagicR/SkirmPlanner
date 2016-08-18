@@ -1,3 +1,11 @@
 {% extends "base.tmpl" %}
-{% load static %}
-<div>Nothing here yet!</div>
+{% load staticfiles %}
+<head>
+  {% block styling %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'team/team.css' %}">
+  {% endblock %}
+</head>
+{% block content %}
+    <div>You are {% if not has_team %}not{% endif %} part of a team</div>
+{% endblock %}

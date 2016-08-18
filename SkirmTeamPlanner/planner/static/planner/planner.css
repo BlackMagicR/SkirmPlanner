@@ -35,6 +35,12 @@
     background-color: green;
 }
 
+.notPlanned{
+    background-image: url('images/plus.png');
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
 .outerSkirmBox{
     background-color:#A11616;
     height: 100px;

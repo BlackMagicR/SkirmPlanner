@@ -1,4 +1,3 @@
-{% load staticfiles %}
 <a class="outerSkirmBox" href="{% url 'planner:skirmdetailview' pk=skirm.id %}">
     <div class="dateBox">
         <div class="dateText">{{ skirm.date.day }}</div>
@@ -9,11 +8,7 @@
         <div class="skirmTitle">{{ skirm.title }}</div>
         <div class="skirmCity">{{ skirm.city }}</div>
     </div>
-    <a class="plannedBox {% if skirm.planned %} planned {% endif %}">
+    <a class="plannedBox notPlanned">
         
     </a>
 </a>
-
-<script>
-    <!--Start script here to either check the planned box or not! -->
-</script>

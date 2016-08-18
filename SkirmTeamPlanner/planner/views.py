@@ -22,5 +22,5 @@ class SkirmDetailView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(SkirmDetailView, self).get_context_data(**kwargs)
-        context['skirm'] = Skirm.objects.get(id=81)
+        context['skirm'] = Skirm.objects.get(id=kwargs['pk'])
         return context
