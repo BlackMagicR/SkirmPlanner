@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'team',
     'updater',
     'planner',
+    'user',
 )
 
 MIDDLEWARE_CLASSES = (

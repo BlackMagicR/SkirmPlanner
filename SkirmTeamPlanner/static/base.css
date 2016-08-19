@@ -38,6 +38,25 @@ html{
     font-size: 16px;
 }
 
+.topbar{
+    background-color: grey;
+    height: 50px;
+    width: 110%;
+    float:left;
+    margin-left:0px;
+    margin-top:-10px;
+}
+
+.loginbutton{
+    color:white;
+    margin-right:10px;
+    margin-top: 5px;
+    float:right;
+    font-size: 25px;
+    width:75px;
+    height:25px;
+}
+
 /* The side navigation menu */
 .menu {
     height: 100%; /* 100% Full-height */

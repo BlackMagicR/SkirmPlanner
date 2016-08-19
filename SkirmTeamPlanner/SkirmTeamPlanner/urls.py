@@ -15,9 +15,13 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from user.views import LoginPage, LogoutPage
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^agenda/', include('planner.urls', namespace='planner', app_name='planner')),
-    url(r'^team/', include('team.urls', namespace='team', app_name='team'))
+    url(r'^team/', include('team.urls', namespace='team', app_name='team')),
+
+    url(r'^login/$', LoginPage.as_view(), name='login'),
+    url(r'^logout/$', LogoutPage.as_view(), name='logout')
 ]
