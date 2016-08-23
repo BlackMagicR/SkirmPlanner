@@ -4,6 +4,8 @@ from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.models import User
 
+from SkirmTeamPlanner.views import LoggedInMixin
+
 
 class LoginPage(FormView):
     template_name = "login.tmpl"
@@ -17,6 +19,10 @@ class LogoutPage(TemplateView):
 
     def get_context_data(self, **kwargs):
         pass
+
+
+class ProfilePage(LoggedInMixin, TemplateView):
+    template_name = "profile.tmpl"
     
 #The following code will be used once it is up and running
 # class RegisterPage(TemplateView):

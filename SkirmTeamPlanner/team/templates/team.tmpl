@@ -7,5 +7,11 @@
   {% endblock %}
 </head>
 {% block content %}
-    <div>You are {% if not has_team %}not{% endif %} part of a team</div>
+  {% if not team_members %}
+    <div> You are not part of a team </div>
+  {% else %}
+    {% for member in team_members %}
+      <div>You are part of team: {{ member.team.title }} with status: {{ member.member_status }}</div>
+    {% endfor %}
+  {% endif %}
 {% endblock %}
