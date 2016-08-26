@@ -1,0 +1,16 @@
+{% extends "base.tmpl" %}
+{% load staticfiles %}
+<head>
+  {% block styling %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'team/teams.css' %}">
+  {% endblock %}
+</head>
+{% block content %}
+  <input class="searchbar" type="text" placeholder="Find teams"/><button>Search</button><a style="float:right;" href="{% url 'team:add' %}">Create team</a>
+  <div class="content">
+    {% for team in teams %}
+      {% include 'team.tmpl' %}
+    {% endfor %}
+  </div>
+{% endblock %}

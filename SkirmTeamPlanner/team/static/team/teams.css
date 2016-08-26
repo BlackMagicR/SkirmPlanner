@@ -1,0 +1,34 @@
+.infoBox{
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin:auto;
+    height: 50px;
+    margin-left: 1em;
+}
+
+.outerTeamBox{
+    background-color:#A11616;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    display:block;
+    margin: 20px 20px 20px 20px;
+    box-shadow: 2px 2px 2px #000000
+}
+
+.teamTitle{
+    float:left;
+    width: 20em;
+    font-weight: bold;
+}
+
+.teamDescription{
+    margin:auto;
+}
+
+#teamHeader{
+    background-color:black;
+    height: 40%;
+    width: 100%;
+}

@@ -1,17 +1,6 @@
-{% extends "base.tmpl" %}
-{% load staticfiles %}
-<head>
-  {% block styling %}
-  {{ block.super }}
-  <link rel="stylesheet" href="{% static 'team/team.css' %}">
-  {% endblock %}
-</head>
-{% block content %}
-  {% if not team_members %}
-    <div> You are not part of a team </div>
-  {% else %}
-    {% for member in team_members %}
-      <div>You are part of team: {{ member.team.title }} with status: {{ member.member_status }}</div>
-    {% endfor %}
-  {% endif %}
-{% endblock %}
+<a class="outerTeamBox" href="{% url 'team:teamdetailview' pk=team.id %}">
+    <div class="infoBox">
+        <div class="teamTitle">{{ team.title }}</div>
+        <div class="teamDescription">{{ team.description }}</div>
+    </div>
+</a>

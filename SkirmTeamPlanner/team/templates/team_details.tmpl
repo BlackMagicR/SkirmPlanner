@@ -1,0 +1,21 @@
+{% extends "base.tmpl" %}
+{% load staticfiles %}
+<head>
+  {% block styling %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'team/teams.css' %}">
+  {% endblock %}
+</head>
+{% block content %}
+
+<div id="teamHeader">
+  <img id="teamImage"></img>
+
+  <h2 id="teamTitle">{{ team.title }}</h2>
+</div>
+<div class="teamContent">
+{% for team_member in members %}
+    {{ team_member.user.username }}
+{% endfor %}
+</div>
+{% endblock %}

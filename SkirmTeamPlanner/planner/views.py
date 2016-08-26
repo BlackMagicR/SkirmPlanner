@@ -11,7 +11,6 @@ class BaseSkirmList(TemplateView):
 class SkirmList(BaseSkirmList):
 
     def get_context_data(self, **kwargs):
-        print "get my context data"
         context = super(SkirmList, self).get_context_data(**kwargs)
         context['skirms'] = Skirm.objects.all()
         relevant_events = PlannedEvent.objects.filter(team__id=1).filter(skirm__in=context['skirms'])#place holder id

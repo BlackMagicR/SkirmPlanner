@@ -16,6 +16,7 @@ class TeamMember(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     team = models.ForeignKey(Team, on_delete=models.CASCADE, default=None)
     member_status = models.CharField(max_length=100, default="")
+    is_admin = models.BooleanField(default=False)
 
 class PlannedEvent(models.Model):
     skirm = models.ForeignKey(Skirm, on_delete=models.CASCADE)
