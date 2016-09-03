@@ -4,6 +4,7 @@ from django.views.generic.edit import FormView
 from django.http import HttpResponse, HttpResponseRedirect
 from django.forms import ModelForm
 from django.forms import Textarea
+from django import forms
 
 from SkirmTeamPlanner.views import LoggedInMixin
 from team.models import TeamMember, Team
@@ -22,6 +23,8 @@ class TeamPage(LoggedInMixin, TemplateView):
         #Is user part of a team? Yes: load team info/ No: load search and join or create team.
 
 class AddTeamForm(ModelForm):
+
+    emails_field = forms.CharField()
     class Meta:
         model = Team
         fields = ['title', 'description']

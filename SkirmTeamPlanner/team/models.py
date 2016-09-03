@@ -22,3 +22,7 @@ class PlannedEvent(models.Model):
     skirm = models.ForeignKey(Skirm, on_delete=models.CASCADE)
     team = models.ForeignKey(Team, on_delete=models.CASCADE)
 
+class Invite(models.Model):
+    team = models.ForeignKey(Team, on_delete=models.CASCADE)
+    invite_key = models.CharField(max_length=50,default="")
+    email = models.EmailField()

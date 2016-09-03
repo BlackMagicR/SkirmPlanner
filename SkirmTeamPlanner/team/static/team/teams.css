@@ -17,10 +17,18 @@
     box-shadow: 2px 2px 2px #000000
 }
 
-.teamTitle{
+#teamTitle{
     float:left;
     width: 20em;
     font-weight: bold;
+    color:white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    margin-bottom: 1em;
+    margin-left: 1em;
 }
 
 .teamDescription{
@@ -28,7 +36,7 @@
 }
 
 #teamHeader{
-    background-color:black;
-    height: 40%;
+    background-color:green;
+    height: 400px;
     width: 100%;
 }
