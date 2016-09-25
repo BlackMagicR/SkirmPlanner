@@ -7,7 +7,9 @@
   {% endblock %}
 </head>
 {% block content %}
-  <input class="searchbar" type="text" placeholder="Find teams"/><button>Search</button><a style="float:right;" href="{% url 'team:add' %}">Create team</a>
+  <div id="team-list-header">
+    <input id="searchbar" type="text" placeholder="Find teams"/><button>Search</button><a style="float:right;" href="{% url 'team:add' %}">Create team</a>
+  </div>
   <div class="content">
     {% for team in teams %}
       {% include 'team.tmpl' %}

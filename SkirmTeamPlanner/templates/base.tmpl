@@ -7,9 +7,9 @@
 </head>
 <div class="topbar">
   {% if user.is_authenticated %}
-  <a class="loginbutton" href="{% url 'logout' %}">Logout</a>
+  <a href="{% url 'logout' %}"><div id="loginbutton">Logout</div></a>
   {% else %}
-  <a class="loginbutton" href="{% url 'login' %}">Login</a>
+  <a href="{% url 'login' %}"><div id="loginbutton">Login</div></a>
   {% endif %}
 </div>
 <div class="menu">

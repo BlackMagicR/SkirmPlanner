@@ -17,9 +17,43 @@
     box-shadow: 2px 2px 2px #000000
 }
 
+#team-list-header{
+    height: 4em;
+    padding-top: 2em;
+    padding-bottom:2em;
+}
+
+div.infobox > div{
+    padding-top: 0.2em;
+}
+
+.teamListTitle{
+    float:left;
+    text-overflow: ellipsis;
+    width: 25em;
+    white-space: nowrap;
+    overflow:hidden;
+}
+
+.teamListFavoriteLocation{
+    position:absolute;
+    width: 15em;
+    white-space: nowrap;
+    overflow:hidden;
+    margin-left: 27em;
+}
+
+.teamListMembersCount{
+    text-overflow: ellipsis;
+    width: 10em;
+    white-space: nowrap;
+    overflow:hidden;
+    float:right;
+}
+
 #teamTitle{
     float:left;
-    width: 20em;
+    width: 40em;
     font-weight: bold;
     color:white;
     text-shadow:
@@ -29,14 +63,43 @@
     1px 1px 0 #000;
     margin-bottom: 1em;
     margin-left: 1em;
-}
-
-.teamDescription{
-    margin:auto;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
 }
 
 #teamHeader{
     background-color:green;
     height: 400px;
     width: 100%;
+}
+
+#teamContent{
+    margin-top: 1em;
+}
+
+#teamDescription{
+    width: 35em;
+}
+
+#memberHeader{
+    font-weight: bold;
+    float:top;
+}
+
+#member{
+    float:left;
+}
+
+#role{
+    float:right;
+}
+
+#memberList{
+    float:right;
+    background-color: #969B96;
+    border-style: solid;
+    border-color: #A11616;
+    width: 15em;
+    padding: 1em;
 }

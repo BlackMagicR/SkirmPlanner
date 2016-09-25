@@ -1,6 +1,7 @@
 <a class="outerTeamBox" href="{% url 'team:teamdetailview' pk=team.id %}">
     <div class="infoBox">
-        <div class="teamTitle">{{ team.title }}</div>
-        <div class="teamDescription">{{ team.description }}</div>
+        <div class="teamListTitle">{{ team.title }}</div>
+        <div class="teamListFavoriteLocation">{{ team.favorite_skirm_location }}</div>
+        <div class="teamListMembersCount">Members: {{ team.team_members.count }}</div>
     </div>
 </a>

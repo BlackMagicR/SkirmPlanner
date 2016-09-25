@@ -41,7 +41,7 @@ html{
 .topbar{
     background-color: grey;
     height: 50px;
-    width: 119em;
+    width:101%;
     float:left;
     margin-left:0px;
     margin-top:-10px;
@@ -63,14 +63,14 @@ html{
     margin-bottom: 20px;
 }
 
-.loginbutton{
+#loginbutton{
     color:white;
-    margin-right:10px;
-    margin-top: 5px;
+    margin-right:0px;
+    padding-top: 15px;
     margin-left: 95%;
-    font-size: 15px;
-    width:75px;
-    height:25px;
+    height:35px;
+    background-color: black;
+    text-align:center
 }
 
 /* The side navigation menu */

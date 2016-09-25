@@ -13,9 +13,16 @@
 
   <h2 id="teamTitle">{{ team.title }}</h2>
 </div>
-<div class="teamContent">
-{% for team_member in members %}
-    {{ team_member.user.username }}
-{% endfor %}
+<div id="teamContent">
+<div id="teamDescription">
+  Hallo, dit is mijn nieuwe team, wees welkom!
+</div>
+  <div id="memberList">
+  <div id="memberHeader"><div id="member">Members</div> <div id="role">Role</div></div>
+  <div style="width: 100%;height:5px;background-color:black;"></div>
+  {% for team_member in members %}
+      {{ team_member.user.username }}
+  {% endfor %}
+  </div>
 </div>
 {% endblock %}
