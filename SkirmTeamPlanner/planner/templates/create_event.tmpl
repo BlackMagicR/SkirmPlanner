@@ -1,0 +1,16 @@
+{% extends "base.tmpl" %}
+{% load i18n %}
+{% load staticfiles %}
+<head>
+  {% block styling %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'planner/planner.css' %}">
+  {% endblock %}
+</head>
+{% block content %}
+    <div class"header">{% trans "Plan new event on skirm: " %} {{ skirm.title }}</div>
+    <form method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create</button>
+    </form>
+{% endblock %}

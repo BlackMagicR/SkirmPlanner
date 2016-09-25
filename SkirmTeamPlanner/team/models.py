@@ -13,6 +13,9 @@ class Team(models.Model):
     #You want to add the members joining this event to a model in the database but it makes no sense to add them to the Skirm model since it is unique to every PlannedEvent.
     planned_skirms = models.ManyToManyField(Skirm, through='PlannedEvent')
 
+    def __unicode__(self):
+        return self.title
+
 class TeamMember(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     team = models.ForeignKey(Team, on_delete=models.CASCADE, default=None)
