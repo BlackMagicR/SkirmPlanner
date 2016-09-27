@@ -17,16 +17,17 @@
 {% endfor %}
 </div>
 </div>
-{% endblock %}
 {% block scriptonpage %}
+{{ block.super }}
 <script type='text/javascript'>
 
   function confirmEventCreation() {
-    var confirmation = confirm({% trans "Are you sure you want to create a new event and invite your teammembers?" %});
+    var confirmation = confirm("{% trans 'Are you sure you want to create a new event and invite your teammembers?' %}");
     if(confirmation){
-      console.log("test");
+      console.log('A working confirmation....');
     }
   }
 
 </script>
+{% endblock %}
 {% endblock %}

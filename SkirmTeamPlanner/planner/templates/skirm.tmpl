@@ -8,7 +8,7 @@
         <div class="skirmTitle">{{ skirm.title }}</div>
         <div class="skirmCity">{{ skirm.city }}</div>
     </div>
-    <a class="plannedBox notPlanned"  href="{% url 'planner:create_event' pk=skirm.id %}">
+    <a class="plannedBox notPlanned" onclick="confirmEventCreation()">
         
     </a>
 </a>
